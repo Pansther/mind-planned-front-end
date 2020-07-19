@@ -38,7 +38,7 @@ export default (
         case DEL_USER: {
             return {
                 ...state,
-                users: state.users.filter(user => ( user.user_id !== action.user_id ))
+                users: state.users!.filter(user => ( user.user_id !== action.user_id ))
             }
         }
 
