@@ -18,13 +18,33 @@ const AppRouter = (): React.ReactElement => {
             <Switch>
 
                 <Route exact path='/'>
-                    <Navbar />
-                    <SubNavbar />
+                    <NavPackage />
                     <Home />
+                </Route>
+
+                <Route path='/store/'>
+                    <NavPackage /> 
+                </Route>
+
+                <Route path='/template/'>
+                    <NavPackage /> 
+                </Route>
+
+                <Route path='/my-plan/'>
+                    <NavPackage /> 
                 </Route>
 
             </Switch>
         </Router>
+    );
+}
+
+const NavPackage = (): React.ReactElement => { 
+    return (
+        <div className='navbar-package' style={{ position: 'sticky', top: '0', zIndex: 99 }}>
+            <Navbar />
+            <SubNavbar />
+        </div>
     );
 }
 

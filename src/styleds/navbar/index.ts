@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import device from '../device';
+
 export const navbarMainColour = `#f5c71a`;
 
 export const NavbarBox = styled.div`
@@ -18,6 +20,10 @@ export const NavbarBox = styled.div`
             color: snow;
             font-size: 34px;
             font-weight: 700;
+
+            @media ${device.mobileL} {
+                font-size: 28px; 
+            }
         }
 
         :hover {

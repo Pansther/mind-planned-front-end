@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { SubNavbarBox } from '../../styleds/subNavbar';
+import { navbarMainColour } from '../../styleds/navbar';
  
 const SubNavbar = (): React.ReactElement => {
 
@@ -18,9 +19,14 @@ const SubNavbar = (): React.ReactElement => {
             <div className='menu-box'>
                 {
                     subMenu!.map(menu => (
-                        <Link to={menu.path} key={menu.id} className='menu-item-box'>
+                        <NavLink 
+                            to={menu.path} 
+                            key={menu.id} 
+                            className='menu-item-box'
+                            activeStyle={{ color: `${navbarMainColour}` }}
+                        >
                             <p>{menu.name}</p>
-                        </Link>
+                        </NavLink>
                     ))
                 }
             </div>
@@ -33,17 +39,17 @@ export default SubNavbar;
 const subMenu = [
     {
         id: 1,
+        name: 'Store',
+        path: '/store/'
+    },
+    {
+        id: 2,
         name: 'Template',
         path: '/template/'
     },
     {
-        id: 2,
+        id: 3,
         name: 'My Plan',
         path: '/my-plan/'
-    },
-    {
-        id: 3,
-        name: 'Search',
-        path: '/search/'
     }
 ];
