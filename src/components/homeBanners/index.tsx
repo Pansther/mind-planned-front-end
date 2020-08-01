@@ -11,7 +11,7 @@ const HomeBanner = (props: HomeBannerProps): React.ReactElement => {
         <HomeBannerBox isOdd={props.id % 2 === 1}>
             <div className='banner-content-box'> 
                 <div className='banner-img-box'>
-                    <img src='' alt={`banner-img-${props.id}`} />
+                    <img src={props.img} alt={`banner-img-${props.id}`} />
                 </div>
 
                 <div className='banner-detail-box'>

@@ -6,6 +6,8 @@ import { HomeBox } from '../../styleds/home';
 
 import { HomeBannerProps } from './type';
 
+import { IMG } from '../../api';
+
 const Home = (): React.ReactElement => { 
     return (
         <HomeBox>
@@ -26,18 +28,21 @@ const homeBannerData: HomeBannerProps[] = [
         id: 1,
         message: 'กำหนดกิจกรรมของคุณ',
         sub_message: 'สร้างกำหนดการ และกำหนดได้ทุกอย่างด้วยตัวของคุณเอง',
+        img: `${IMG}/home-banner-1.png`,
         path: '#'
     },
     {
         id: 2,
         message: 'หลากหลายรูปแบบ',
         sub_message: 'สร้างและเลือกใช้งาน Templates และ Stickers หลากหลายรูปแบบมากมาย',
+        img: '',
         path: '#'
     }, 
     {
         id: 3,
         message: 'เริ่มต้น',
         sub_message: 'คลิกเพื่อเริ่มสร้างกำหนดการแรกของคุณได้เลย',
+        img: '',
         path: '#'
     }
 ];
