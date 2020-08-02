@@ -9,7 +9,7 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
 
     position: relative;
     padding-top: 40%; 
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 
     @media ${device.tablet} {
         padding-top: 115%; 
@@ -122,6 +122,18 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
                         font-size: 32px;
                         /* font-family: 'Mitr', sans-serif; */
                     } 
+
+                    @media ${device.mobileXL} {
+                        p {
+                            font-size: 26px;
+                        }
+                    }
+
+                    @media ${device.mobileL} {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
                 }
 
                 .sub-mes-box {
@@ -131,13 +143,23 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
                         font-weight: 300;
                         /* font-family: 'Mitr', sans-serif; */
                     }
+
+                    @media ${device.mobileXL} {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+
+                    @media ${device.mobileL} {
+                        p {
+                            font-size: 12px;
+                        }
+                    }
                 }  
 
                 .detail-btn { 
                     display: flex;
-                    justify-content: center;
-                    justify-self: center;
-                    justify-items: center;
+                    justify-content: center; 
                 }
             }
 

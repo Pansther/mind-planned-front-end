@@ -5,6 +5,8 @@ import { createStore } from 'redux';
 import { rootReducer } from './store';
 import AppRouter from './routes';
 
+import './App.css';
+
 const store = createStore(rootReducer);
 
 const App: React.FC = () => { 

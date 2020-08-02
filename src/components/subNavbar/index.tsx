@@ -1,40 +1,47 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import { SubNavbarBox } from '../../styleds/subNavbar';
+import { SubNavbarBigBox, SubNavbarBox } from '../../styleds/subNavbar';
 import { navbarMainColour } from '../../styleds/navbar';
+
+import { RootState } from '../../store';
  
-const SubNavbar = (): React.ReactElement => {
+const SubNavbar = (props?: RootState): React.ReactElement => {
 
     const [state = {
-        loading: true
+        isLoading: true, 
     }, setState] = React.useState();
 
     React.useEffect(() => {
-        setState({ loading: false });
+        setState({ 
+            ...state, 
+            isLoading: false,
+        }); 
+        // eslint-disable-next-line
     }, []);
-
+  
     return (
-        <SubNavbarBox loading={state.loading}>
-            <div className='menu-box'>
-                {
-                    subMenu!.map(menu => (
-                        <NavLink 
-                            to={menu.path} 
-                            key={menu.id} 
-                            className='menu-item-box'
-                            activeStyle={{ color: `${navbarMainColour}` }}
-                        >
-                            <p>{menu.name}</p>
-                        </NavLink>
-                    ))
-                }
-            </div>
-        </SubNavbarBox>
+        <SubNavbarBigBox open={props?.subNavM.open}>
+            <SubNavbarBox isLoading={state.isLoading} open={props?.subNavM.open}>
+                <div className='menu-box'>
+                    {
+                        subMenu!.map(menu => (
+                            <NavLink
+                                to={menu.path}
+                                key={menu.id}
+                                className='menu-item-box'
+                                activeStyle={{ color: `${navbarMainColour}` }}
+                            >
+                                <p>{menu.name}</p>
+                            </NavLink>
+                        ))
+                    }
+                </div>
+            </SubNavbarBox>
+        </SubNavbarBigBox>
     );
 }
-
-export default SubNavbar;
 
 const subMenu = [
     {
@@ -53,3 +60,11 @@ const subMenu = [
         path: '/my-plan/'
     }
 ];
+
+const mapState = (state: RootState) => ({
+    subNavM: state.subNavM
+})
+
+const SubNavbarConnected = connect(mapState)(SubNavbar);
+
+export default SubNavbarConnected; 
