@@ -7,6 +7,7 @@ export const SubNavbarBigBox = styled.div<{ open?: boolean }>`
      
     @media ${device.tablet} { 
         display: flex; 
+        /* backdrop-filter: blur(2px); */
         background-color: rgba(0, 0, 0, 0.8); 
         height: calc(100vh - 60px);  
         transition: opacity 0.4s;
@@ -46,14 +47,14 @@ export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
 
     @media ${device.tablet} {
         display: flex; 
-        background-color: lightgoldenrodyellow;
+        background-color: palegoldenrod; 
         height: calc(100vh - 60px - 10px); 
         z-index: 10; 
         border-radius: 50%;
         
         overflow: auto;
         position: fixed;
-        top: 60px; 
+        top: 60px;  
         right: -50%; 
 
         transition: width 0.2s ease-in, opacity 0.2s;
@@ -62,19 +63,40 @@ export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
             props => props.open === true ? 
             ` 
                 width: 100%;   
-                opacity: 1; 
+                opacity: 1;  
                  
                 transition: width 0.2s ease-in, opacity 0.2s;
             `
             :
             ` 
                 width: 0;
-                opacity: 0; 
+                opacity: 0;  
                 
                 transition: width 0.2s ease-in, opacity 0.2s;
             `
         }
     } 
+
+    @media ${device.mobileL} {
+        right: -70%; 
+
+        ${
+            props => props.open === true ?
+            ` 
+                width: 140%;   
+                opacity: 1;  
+                
+                transition: width 0.2s ease-in, opacity 0.2s;
+            `
+            :
+            ` 
+                width: 0;
+                opacity: 0;  
+                
+                transition: width 0.2s ease-in, opacity 0.2s;
+            `
+        }
+    }
 
     ${
         props => props.isLoading === true ?
@@ -100,6 +122,10 @@ export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
             width: 95%;
             flex-flow: column wrap;
             text-align: center; 
+            margin-left: -45%;
+        }
+
+        @media ${device.mobileL} {   
             margin-left: -50%;
         }
 

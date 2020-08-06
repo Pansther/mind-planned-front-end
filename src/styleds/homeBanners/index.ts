@@ -75,11 +75,9 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
             @media ${device.tablet} {
                 width: 100%;  
                 height: 40%;
-                border-radius: 0;
-                padding: 0;
-                border-top-left-radius: 40%;
-                border-top-right-radius: 40%; 
+                border-radius: 50px;
 
+                padding: 0; 
                 bottom: 0;  
             }
 
@@ -101,11 +99,19 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
                 flex-flow: column wrap; 
 
                 @media ${device.tablet} {
-                    ${props => props.isOdd ? `
-                        margin-left: 0px;
-                    ` : `
-                        margin-right: 0px;
-                    `}
+                    ${props => props.isOdd ? 
+                        `
+                            margin-left: 0px;
+                        ` 
+                        : 
+                        `
+                            margin-right: 0px;
+                        `
+                    }
+                }
+
+                @media ${device.mobileXL} {
+                    width: 80%;
                 }
 
                 p {            

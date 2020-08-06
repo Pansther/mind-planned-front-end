@@ -1,6 +1,8 @@
 import styled from 'styled-components';
   
 import { Link } from 'react-router-dom';
+
+import device from '../device';
  
 export const MainGhostBtnBox = styled(Link)`
     display: flex;
@@ -23,6 +25,16 @@ export const MainGhostBtnBox = styled(Link)`
         align-self: center; 
         margin-right: 5px;
         font-size: 16px;
+
+        @media ${device.mobileXL} {
+            font-size: 14px;
+        }
+    }
+
+    @media ${device.mobileXL} {
+        border: 1.5px solid black; 
+        padding: 4px 12px 4px 12px;
+        font-size: 14px;
     }
 
     :hover {
