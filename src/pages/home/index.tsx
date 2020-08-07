@@ -35,14 +35,14 @@ const homeBannerData: HomeBannerProps[] = [
         id: 2,
         message: 'หลากหลายรูปแบบ',
         sub_message: 'สร้างและเลือกใช้งาน Templates และ Stickers หลากหลายรูปแบบมากมาย',
-        img: '',
+        img: `${IMG}/home-banner-2.png`,
         path: '#'
     }, 
     {
         id: 3,
         message: 'เริ่มต้น',
         sub_message: 'คลิกเพื่อเริ่มสร้างกำหนดการแรกของคุณได้เลย',
-        img: '',
+        img: `${IMG}/home-banner-3.png`,
         path: '#'
     }
 ];
