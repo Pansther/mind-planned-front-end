@@ -46,6 +46,8 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
             @media ${device.tablet} {
                 width: 100%;    
                 height: 66%;
+
+                align-self: flex-start;
             }
         } 
  
