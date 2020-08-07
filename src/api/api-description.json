@@ -1,0 +1,86 @@
+{
+    "swagger":"2.0",
+    "info": {
+        "title":"mind-planned-api",
+        "version":"1.0"
+    },
+    "host": "mind-planned.herokuapp.com",
+    "basePath": "/",
+    "schemes": ["https"],
+    "paths": {
+        "/users/": { 
+            "post": {
+                "description":"เพิ่มข้อมูลผู้ใช้งานด้วยการส่ง name",
+                "summary": "เพิ่มผู้ใช้งาน",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "สร้างสำเร็จ"
+                    }
+                }
+            },
+            "get": {
+                "description": "เข้าถึงข้อมูลผู้ใช้งานทั้งหมด ได้รับเป็น array of object",
+                "summary": "เข้าถึงข้อมูลผู้ใช้งานทั้งหมด", 
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "description": "อัพเดตข้อมูลผู้ใช้งานโดยส่ง user_id, name ที่ต้องการอัพเดต",
+                "summary": "อัพเดตข้อมูลผู้ใช้งาน",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "formData",
+                        "type": "integer",
+                        "required": true
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "ไม่เจอ user"
+                    }
+                }
+            },
+            "delete": {
+                "description": "ลบข้อมูลผู้ใช้งานด้วยการส่ง params {user_id} ผ่านทาง url",
+                "summary": "ลบข้อมูลผู้ใช้งาน",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "type": "integer",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "ลบ user สำเร็จ"
+                    },
+                    "404": {
+                        "description": "ไม่เจอ user"
+                    }
+                }
+            }
+        }
+    }
+}
