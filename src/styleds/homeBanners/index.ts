@@ -36,7 +36,8 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
             text-align: center; 
 
             overflow: hidden;
-            position: relative;
+            position: relative; 
+            align-self: center;
 
             img {
                 width: 85%;
