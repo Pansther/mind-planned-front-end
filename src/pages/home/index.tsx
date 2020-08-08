@@ -29,21 +29,21 @@ const homeBannerData: HomeBannerProps[] = [
         message: 'กำหนดกิจกรรมของคุณ',
         sub_message: 'สร้างกำหนดการ และกำหนดได้ทุกอย่างด้วยตัวของคุณเอง',
         img: `${IMG}/home-banner-1.png`,
-        path: '#'
+        path: '/my-plan/'
     },
     {
         id: 2,
         message: 'หลากหลายรูปแบบ',
         sub_message: 'สร้างและเลือกใช้งาน Templates และ Stickers หลากหลายรูปแบบมากมาย',
-        img: '',
-        path: '#'
+        img: `${IMG}/home-banner-2.png`,
+        path: '/template/'
     }, 
     {
         id: 3,
         message: 'เริ่มต้น',
         sub_message: 'คลิกเพื่อเริ่มสร้างกำหนดการแรกของคุณได้เลย',
-        img: '',
-        path: '#'
+        img: `${IMG}/home-banner-3.png`,
+        path: '/my-plan/'
     }
 ];
 
