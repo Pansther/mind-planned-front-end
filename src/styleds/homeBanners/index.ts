@@ -12,7 +12,7 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
     /* margin-bottom: 50px; */
 
     @media ${device.tablet} {
-        padding-top: 115%; 
+        padding-top: 120%; 
     }
 
     .banner-content-box {
@@ -34,6 +34,7 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
             background-color: lightgoldenrodyellow;
             width: 55%;     
             text-align: center; 
+            align-self: center;
 
             overflow: hidden;
             position: relative;
@@ -43,8 +44,9 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
             }
 
             @media ${device.tablet} {
-                width: 100%;    
-                height: 66%;
+                width: 100%;     
+
+                align-self: flex-start;
             }
         } 
  
