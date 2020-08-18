@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HomeBanner from '../../components/homeBanners';
+import Footer from '../../components/footer';
 
 import { HomeBox } from '../../styleds/home';
 
@@ -10,8 +11,7 @@ import { IMG } from '../../api';
 
 const Home = (): React.ReactElement => { 
     return (
-        <HomeBox>
-            <h1>Hello from Home.</h1>
+        <HomeBox> 
             <div className='banner-lists'>
                 {
                     homeBannerData!.map((banner, index) => (
@@ -19,6 +19,7 @@ const Home = (): React.ReactElement => {
                     ))
                 }
             </div>
+            <Footer />
         </HomeBox>
     );
 }

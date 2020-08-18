@@ -15,37 +15,28 @@ import Home from '../pages/home';
 const AppRouter = (): React.ReactElement => {
     return (
         <Router>
+
+            <Navbar />
+            <SubNavbar />
+
             <Switch>
 
-                <Route exact path='/'>
-                    <NavPackage />
+                <Route exact path='/'> 
                     <Home />
                 </Route>
 
-                <Route path='/store/'>
-                    <NavPackage /> 
+                <Route path='/store/'> 
                 </Route>
 
-                <Route path='/template/'>
-                    <NavPackage /> 
+                <Route path='/template/'> 
                 </Route>
 
-                <Route path='/my-plan/'>
-                    <NavPackage /> 
+                <Route path='/my-plan/'> 
                 </Route>
 
             </Switch>
         </Router>
     );
 }
-
-const NavPackage = (): React.ReactElement => { 
-    return (
-        <div className='navbar-package' style={{ position: 'sticky', top: '0', zIndex: 99 }}>
-            <Navbar />
-            <SubNavbar />
-        </div>
-    );
-}
-
+ 
 export default AppRouter;

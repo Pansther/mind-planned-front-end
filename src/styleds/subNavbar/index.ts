@@ -11,6 +11,7 @@ export const SubNavbarBigBox = styled.div<{ open?: boolean }>`
         background-color: rgba(0, 0, 0, 0.8); 
         height: calc(100vh - 60px);  
         transition: opacity 0.4s;
+        z-index: 99;
 
         position: fixed; 
 

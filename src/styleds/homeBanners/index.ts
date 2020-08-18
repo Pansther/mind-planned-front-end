@@ -6,13 +6,15 @@ export const HomeBannerBox = styled.div<{ isOdd?: boolean }>`
     display: flex;
     background-color: lightgoldenrodyellow; 
     width: 100%; 
+    height: 100%;
 
     position: relative;
     padding-top: 40%; 
-    /* margin-bottom: 50px; */
+    margin-top: 25px;
 
     @media ${device.tablet} {
         padding-top: 120%; 
+        margin-top: 0px;
     }
 
     .banner-content-box {
