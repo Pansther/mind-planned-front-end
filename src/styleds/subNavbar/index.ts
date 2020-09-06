@@ -3,14 +3,16 @@ import styled from 'styled-components';
 import { navbarMainColour } from '../navbar';
 import device from '../device';
 
+export const subNavbarMainColour = `snow`;
+// export const subNavbarMainColour = `rgb(240, 240, 240)`;
+
 export const SubNavbarBigBox = styled.div<{ open?: boolean }>`
      
     @media ${device.tablet} { 
-        display: flex; 
-        /* backdrop-filter: blur(2px); */
+        display: flex;  
         background-color: rgba(0, 0, 0, 0.8); 
         height: calc(100vh - 60px);  
-        transition: opacity 0.4s;
+        transition: opacity 0.4s;  
         z-index: 99;
 
         position: fixed; 
@@ -33,10 +35,11 @@ export const SubNavbarBigBox = styled.div<{ open?: boolean }>`
 export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
     display: flex; 
     flex-flow: row wrap;
-    background-color: lightgoldenrodyellow;
+    background-color: ${subNavbarMainColour}; 
     width: 100%;
-    height: 50px;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.07);
+    height: 50px; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 99;
 
     align-items: center;
     justify-content: center;
@@ -132,7 +135,7 @@ export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
 
         .menu-item-box {
             box-sizing: border-box;
-            border-bottom: 6px solid lightgoldenrodyellow;
+            border-bottom: 6px solid ${subNavbarMainColour}; 
             transition: border-color 0.1s;
             
             margin-left: 25px;
