@@ -7,16 +7,20 @@ export const navbarMainColour = `#f5c71a`;
 export const NavbarBox = styled.div<{ open?: boolean }>`
     display: flex;
     background-color: ${navbarMainColour};
+    /* background-color: snow; */
     width: 100%;
     height: 60px;
+    z-index: 99;
+
+    position: sticky;
+    top: 0;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
 
     @media ${device.tablet} {
         flex-flow: row wrap;
-        justify-content: space-between;
-        /* padding: 0 10px 0 10px; */
+        justify-content: space-between; 
     }
 
     .name-box {
@@ -24,6 +28,7 @@ export const NavbarBox = styled.div<{ open?: boolean }>`
 
         p {
             color: snow;
+            /* color: ${navbarMainColour}; */
             font-size: 34px;
             font-weight: 700;
             padding: 0;

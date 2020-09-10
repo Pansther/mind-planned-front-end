@@ -12,10 +12,14 @@ const Navbar = (props?: RootState): React.ReactElement => {
     const dispatch = useDispatch();
 
     function dropDownHandler() {
-        if (props?.subNavM.open)
-            dispatch(closeSubNavM());
-        else    
-            dispatch(openSubNavM());
+        if (props?.subNavM.open) {
+            dispatch(closeSubNavM())
+            document.querySelector("body")!.style.overflow = 'auto'; 
+        }
+        else {
+            dispatch(openSubNavM()); 
+            document.querySelector("body")!.style.overflow = 'hidden'; 
+        }
     }
 
     return (
