@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import device from '../../styleds/device';
 import { navbarMainColour } from '../../styleds/navbar';
 
 // export const footerMainColour = '#FFDB58';
@@ -8,21 +9,40 @@ export const footerMainColour = '#222';
 export const FooterBox = styled.div`
     display: flex;
     background: ${footerMainColour}; 
-    height: 400px;
+    min-height: 350px;
     width: 100%;
-
+ 
     margin-top: 25px; 
     justify-content: center;
 
     .footer-content {
         display: flex;
-        width: 70%;
+        flex-flow: row nowrap;
+        min-width: 70%;
 
-        margin-top: 40px;
-        justify-content: space-around;
+        margin-top: 40px;  
+
+        @media ${device.tablet} {
+            flex-flow: row wrap;
+        }
 
         .content-box { 
             color: white;
+            max-width: 230px;
+
+            margin-right: 60px;
+
+            @media ${device.tablet} {
+                min-width: 280px;
+                margin-right: 0px;
+            }
+
+            @media ${device.mobileXL} {
+                width: 230px;
+                margin-right: 0px;
+                margin-bottom: 40px;
+                margin-left: 30px;
+            }
 
             .sub-content-box {
                 a {

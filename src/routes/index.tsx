@@ -7,6 +7,7 @@ import {
 
 import Navbar from '../components/navbar';
 import SubNavbar from '../components/subNavbar';
+import Footer from '../components/footer';
 
 import './style.css';
 
@@ -35,6 +36,9 @@ const AppRouter = (): React.ReactElement => {
                 </Route>
 
             </Switch>
+
+            <Footer />
+            
         </Router>
     );
 }

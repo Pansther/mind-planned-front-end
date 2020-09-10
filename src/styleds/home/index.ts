@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const HomeBox = styled.div`
-    overflow: auto;
+    /* overflow: auto;*/
     background: lightgoldenrodyellow;
-    height: calc(100vh - 60px); 
+    /* height: calc(100vh - 60px);  */
 
     .banner-lists {
         display: flex;

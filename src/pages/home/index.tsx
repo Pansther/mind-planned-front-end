@@ -1,7 +1,6 @@
 import React from 'react';
 
-import HomeBanner from '../../components/homeBanners';
-import Footer from '../../components/footer';
+import HomeBanner from '../../components/homeBanners'; 
 
 import { HomeBox } from '../../styleds/home';
 
@@ -18,8 +17,7 @@ const Home = (): React.ReactElement => {
                         <HomeBanner key={index} { ...banner } />
                     ))
                 }
-            </div>
-            <Footer />
+            </div> 
         </HomeBox>
     );
 }
