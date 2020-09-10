@@ -10,6 +10,10 @@ export const NavbarBox = styled.div<{ open?: boolean }>`
     /* background-color: snow; */
     width: 100%;
     height: 60px;
+    z-index: 99;
+
+    position: sticky;
+    top: 0;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;

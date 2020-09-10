@@ -6,14 +6,17 @@ import device from '../device';
 export const subNavbarMainColour = `snow`;
 // export const subNavbarMainColour = `rgb(240, 240, 240)`;
 
-export const SubNavbarBigBox = styled.div<{ open?: boolean }>`
-     
+export const SubNavbarBigBox = styled.div<{ open?: boolean }>` 
+    position: sticky;
+    top: 60px;
+    z-index: 98;
+
     @media ${device.tablet} { 
         display: flex;  
         background-color: rgba(0, 0, 0, 0.8); 
         height: calc(100vh - 60px);  
         transition: opacity 0.4s;  
-        z-index: 99;
+        z-index: 98;
 
         position: fixed; 
 
@@ -39,8 +42,8 @@ export const SubNavbarBox = styled.div<{ isLoading: boolean, open?: boolean }>`
     width: 100%;
     height: 50px; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 99;
-
+    z-index: 98; 
+ 
     align-items: center;
     justify-content: center;
     padding-bottom: 0px;
